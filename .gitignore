@@ -6,7 +6,7 @@ temp.py
 temp2.py
 data.xlsm
 users.db
-venv/
+.venv/
 img/error.jpg
-img/mayby.jpg
+img/maybe.jpg
 logs/
