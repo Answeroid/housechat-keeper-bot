@@ -1,4 +1,8 @@
 __pycache__/
+.vscode/
+.venv/
+logs/
+img/
 *.py[cod]
 .idea
 *.log
@@ -6,7 +10,3 @@ temp.py
 temp2.py
 data.xlsm
 users.db
-.venv/
-img/error.jpg
-img/maybe.jpg
-logs/
