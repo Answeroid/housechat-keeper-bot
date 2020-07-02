@@ -7,18 +7,18 @@ class MyFilters(BaseFilter):
 
     @staticmethod
     def call_err(message):
-        return 'error' == message.text
+        return "error" == message.text
 
     @staticmethod
     def integers(message):
         if message.text:
-            pattern = r'^[0-9]+$'
+            pattern = r"^[0-9]+$"
             found = re.findall(pattern, message.text)
             return found if found else False
 
     @staticmethod
     def flood(message):
-        pattern = r'\bфлуд\w{,4}\b|\bбубнил\w{,4}\b'
+        pattern = r"\bфлуд\w{,4}\b|\bбубнил\w{,4}\b"
         if message.text:
             found = re.findall(pattern, message.text, flags=re.IGNORECASE)
             return found if found else False
@@ -38,7 +38,7 @@ filt_flood = MyFilters().flood
 
 class FilterBlock(BaseFilter):
     def filter(self, message):
-        pattern = r'\bху[е,й,я]\w{,4}\b|\bп[і,ы,и]зда\w{,4}\b'
+        pattern = r"\bху[е,й,я]\w{,4}\b|\bп[і,ы,и]зда\w{,4}\b"
         if message.text:
             found = re.findall(pattern, message.text, flags=re.IGNORECASE)
             return found if found else False
